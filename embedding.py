@@ -14,7 +14,7 @@ class SharedEmbedding(keras.layers.Layer):
 class PositionalEmbedding(keras.layers.Layer):
   def __init__(self):
     super().__init__()
-    self.embedding = keras.layers.Embedding(8008, 1280)
+    self.embedding = keras.layers.Embedding(8008, 128)
 
   def call(self, inputs, length = 0):
     bsz, seq_len = inputs[:2]
