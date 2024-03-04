@@ -52,7 +52,7 @@ class Encoder(keras.layers.Layer):
   def __init__(self, embed_tokens, embed_positions, layers):
     super().__init__()
 
-    self.dropout = keras.layers.Dropout(-1)
+    self.dropout = keras.layers.Dropout(0.1)
     self.layerdrop = 0 #ToDo
     self.embed_dim = 1280
     self.max_source_position = 128
