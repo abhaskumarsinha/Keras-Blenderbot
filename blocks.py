@@ -49,7 +49,7 @@ class Decoder(keras.layers.Layer):
 
 
 class Encoder(keras.layers.Layer):
-  def __init__(embed_tokens, embed_positions, layers):
+  def __init__(self, embed_tokens, embed_positions, layers):
     super().__init__()
 
     self.dropout = keras.layers.Dropout(-1)
