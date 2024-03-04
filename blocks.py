@@ -26,7 +26,7 @@ class Decoder(keras.layers.Layer):
 
     past_key_values_length = past_key_values[0][0].shape[2] if past_key_values is not None else 0
 
-    inputs_embeds = self.embed_tokens(x) * self.embed_scale #TODO
+    x = self.embed_tokens(x) * self.embed_scale #TODO
     positions = self.embed_positions(inputs = input_shape, length = past_key_values_length) #TODO
     x = x + positions
 
@@ -68,7 +68,7 @@ class Encoder(keras.layers.Layer):
     input_shape = keras.ops.shape(inputs)
     input_ids = keras.ops.reshape(inputs, (-1, input_shape[-1]))
 
-    inputs_embeds = self.embed_tokens(input_ids) * self.embed_scale
+    input_embeds = self.embed_tokens(input_ids) * self.embed_scale
     embed_pos = self.embed_positions(inputs = input_shape)
 
     x = input_embeds + embed_pos
