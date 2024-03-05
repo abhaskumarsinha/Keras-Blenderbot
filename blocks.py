@@ -40,7 +40,7 @@ class Decoder(keras.layers.Layer):
 
       x, cache = decoder_layer(x, encoder_hidden_states = encoder_hidden_states, past_key_value = past_key_value)
 
-      next_decoder_cache = (cache, )
+      next_decoder_cache += (cache, )
 
     x = self.layer_norm(x)
 
