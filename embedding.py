@@ -19,6 +19,9 @@ class PositionalEmbedding(keras.layers.Layer):
   def call(self, inputs, length = 0):
     bsz, seq_len = inputs[:2]
 
-    y = self.embedding(keras.ops.einsum('j, bij -> bij', keras.ops.arange(length, length + seq_len), keras.ops.ones((bsz, seq_len, seq_len))))
+    ones = keras.ops.ones((bsz, seq_len))
+    seq = keras.ops.reshape(keras.ops.arange(length, length + seq_len), (1, seq_len))
 
-    return y[0]
+    y = self.embedding(keras.ops.einsum('bi, xi -> bi', ones, seq))
+
+    return y
