@@ -23,6 +23,7 @@ Building upon the insights of prior research in open-domain chatbots, Blenderbot
   - Transferring weights layer-by-layer
      Gradio UI for testing the model
 - Experimentation with additional model support planned for the future
+- Caching mechanism to speed up inference by 20x
 
 ## Abstract
 
