@@ -2,7 +2,8 @@
 A Keras implementation of Blenderbot, a state-of-the-art open-domain chatbot model, supporting TensorFlow, PyTorch, and JAX backends seamlessly.
 
 # Jump Directly into Colab to test? 
-Go Ahead: https://colab.research.google.com/drive/1Vo-94oKx7RoLeoqj0zkinlGkHOsRJqHk?usp=sharing
+Go Ahead: [![image](https://github.com/abhaskumarsinha/Keras-Blenderbot/assets/31654395/3180ef9d-879c-43b6-880f-5ecfcb0da4be)](https://colab.research.google.com/github/abhaskumarsinha/Keras-Blenderbot/blob/main/Keras_Blenderbot.ipynb)
+
 
 # ⚠️ WORK IN PROGRESS!
 
